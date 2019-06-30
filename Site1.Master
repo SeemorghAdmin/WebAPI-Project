@@ -1,0 +1,377 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Mainlogin.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8" />
+        <title>مرجع تخصصی برنامه نویسان</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="spookynet.org, webdesignlab.org " /> 
+        <link rel='stylesheet' href='css/bootstrap.css' type='text/css' />
+        <link rel='stylesheet' href='css/shortcodes.css' type='text/css' />
+        <link rel='stylesheet' href='css/fonts/font-awesome.css' type='text/css' />
+        <link rel='stylesheet' href='css/revslider.css' type='text/css' />
+        <link rel='stylesheet' href='css/style.css' type='text/css' />
+        <link rel='stylesheet' href='css/bootstrap-responsive.css' type='text/css' />
+        <link rel='stylesheet' href='css/media-queries.css' type='text/css' />
+        <link rel='stylesheet' href='css/skins/switcher.php?default=black.css' type='text/css' />
+        <script type='text/javascript' src='http://html5shim.googlecode.com/svn/trunk/html5.js?ver=3.5.1'></script>
+        <!-- Google Webfonts -->
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300" rel="stylesheet" type="text/css" />
+        <link href="images/favicon.ico" rel="shortcut icon" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="home" style="background-color:#222021;">
+     
+
+
+
+
+   <div id="wrapper">
+            <header id="header" class="container navbar">
+                <!-- Collapse button mobile-->
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> 
+<span class="icon-bar"></span>  <span class="icon-bar"></span> 
+                </a>
+                <!-- Logo -->
+                <h1>
+                    
+                     
+                   <%-- 
+                    <a id="logo" --%>
+<%--class="pull-right" href="https://www.google.com/">--%>
+                        <img  class="pull-right" src="img/Logo - 1.png" width="200">
+
+                   <%-- </a>--%>
+    
+
+                </h1>
+
+                <div id="top-contact">
+                    <div class="pull-left">
+                        <p>
+                      <span class="icon-envelope-alt"></span><a href="#">Seemorgh@simorghsamaneh.ir</a>
+                        </p>
+                        <p><span class="icon-phone"></span>88454816</p>
+                    </div>
+                    <!-- end pull-left -->
+                </div>
+                <!-- end top-contact -->
+                <div class="clear"></div>
+                <!-- Menu -->
+                <nav id="menu" class="nav-collapse collapse default-menu">
+                    <ul id="menu-top-menu" class="nav">
+                        <!-- Home -->
+                        <li class="dropdown current_page_item" data-dropdown="dropdown"><a href="#" class="dropdown-toggle" data-target="#">صفحه اصلی</a>
+                           <%-- <ul class="dropdown-menu">
+                                <li><a href="index2.html">کلیپ اسلایدر</a>
+                                </li>
+                                <li><a href="index3.html">اسلایدر
+</a>
+                                </li>
+                                <li class="current_page_item"><a href="index.html">اسلایدر</a>
+                                </li>
+                            </ul>--%>
+                        </li>
+                        <!-- About -->
+                        <li data-dropdown="dropdown"><a href="#" class="dropdown-toggle" data-target="#">درباره سیمرغ
+</a>
+<%--                            <ul class="dropdown-menu">
+                                <li><a href="about.html">درباره ما</a>
+                                </li>
+                                <li><a href="sidebar-left.html"> آشنایی با شبکه علمی</a>
+                                </li>
+                                <li><a href="sidebar-right.html">گواهینامه ها</a>
+                                </li>
+                                <li>
+<a href="">عرض کامل</a>
+                                </li>
+                                <li><a href="shortcodes.html">مجوزها </a>
+                                </li>
+                            </ul>--%>
+                        </li>
+                        <!-- Services -->
+                        <li><a href="http://localhost:60838/FrmPage">ورود کاربران</a>
+                        </li>
+                        <!-- Portfolio -->
+                        <li data-dropdown="dropdown"><a href="http://localhost:60838/NemooneKar" class="dropdown-toggle" data-target="#">نمونه کار</a>
+                            <%--<ul class="dropdown-menu">
+                                <li><a href="portfolio-3.html">سه ستون</a>
+                                </li>
+                                <li><a href="">
+چهارستون</a>
+                                </li>
+                                <li><a href="portfolio-2.html">دوستون</a>
+                                </li>
+                                <li><a href="">یک ستون</a>
+                                </li>
+                                <li><a href="portfolio-single-1.html">تک پروژه 1</a>
+
+                                </li>
+                                <li><a href="">تک پروژه 2</a>
+                                </li>
+                                <li><a href="portfolio-single-3.html">تک پروژه 3</a>
+                                </li>
+                            </ul>--%>
+                        </li>
+                        <!-- Blog -->
+                        <li data-dropdown="dropdown"><a href="#" class="dropdown-toggle" data-target="#">وبلاگ</a>
+                          <%--  <ul class="dropdown-menu">
+                                <li><a href="blog-1.html">وبلاگ عرض کامل</a>
+                                </li>
+                                <li><a href="blog-2.html">وبلاگ نرمال</a>
+                                </li>
+                                <li><a href="blog-single-1.html">پست 1</a>
+                                </li>
+                                <li><a href="">
+پست 2</a>
+                                </li>
+                            </ul>--%>
+                        </li>
+                        <!-- Contact -->
+                        <li><a href="contact.html">تماس با ما</a>
+
+                            <%--<ul class="dropdown-menu">
+                                <li><a href="index2.html">شماره تماس </a>
+   
+                                <li class="current_page_item"><a href="index.html">نشانی</a>
+                                </li>
+                            </ul>--%>
+
+                        </li>
+                    </ul>
+                </nav>
+                <!-- end #menu -->
+                <div class="clear"></div>
+            </header>
+            <!-- end #header -->
+            <section id="main" class="container">
+                <section id="homeSlider" class="revslider" data-speed="6000" data-height="440">
+                    <div class="bannercontainer" style="background:transparent !important;" >
+                        <div class="banner">
+                            <ul>
+                                <!-- BOXFADE -->
+                                <li data-transition="boxfade" data-slotamount="5">
+                                    <img src="img/template/transparent.png">
+                                    <div class="caption lft big_white" data-x="70" data-y="140" data-speed="500" data-start="900" data-easing="easeOutBack">
+طراحی هوشمندانه، خلاق
+
+                                        <br />
+و حرفه ای
+</div>
+                                    <div class="caption lft small_white" data-x="70" data-y="230" data-speed="500" data-start="1200" data-easing="easeOutBack">توضیحات اسلاید چهارم
+                                        <br />--------------توضیحات اسلاید چهارم-----------------<a href="#">
+اطلاعات بیشتر
+</a>
+                                        <%-- slider4 --%>
+                                    </div>
+                                    <div class="caption lfr" data-x="460" data-y="-1" data-speed="400" data-start="1600" data-easing="easeOutExpo">
+                                        <img src="img/slides/2.png">
+                                    </div>
+                                    <div class="caption lfr" data-x="0" data-y="-1" data-speed="400" data-start="1300" data-easing="easeOutExpo">
+                                        <img src="img/slides/stripe.png">
+                                    </div>
+                                    <div class="caption lfr" data-x="86" data-y="-1" data-speed="400" data-start="1400" data-easing="easeOutExpo">
+                                        <img src="img/slides/stripe.png">
+                                    </div>
+                                    <div class="caption lfr" data-x="172" data-y="-1" data-speed="400" data-start="1500" data-easing="easeOutExpo">
+                                        <img src="img/slides/stripe.png">
+                                    </div>
+                                </li>
+                                <li data-transition="boxfade" data-slotamount="5">
+                                    <img src="img/template/transparent.png">
+                                    <div class="caption lft big_white" data-x="209" data-y="64" data-speed="900" data-start="900" data-easing="easeOutBack">
+
+لورم ایپسوم یا طرح‌نما</div>
+                                    <div class="caption lfr" data-x="54" data-y="169" data-speed="1000" data-start="1200" data-easing="easeOutExpo">
+                                        <img src="img/slides/1.png">
+                                    </div>
+                                    <div class="caption lfr" data-x="565" data-y="166" data-speed="1000" data-start="1600" data-easing="easeOutExpo">
+                                        <img src="img/slides/tra3.png">
+                                    </div>
+                                    <div class="caption lfr" data-x="230" data-y="93" data-speed="1000" data-start="1400" data-easing="easeOutExpo">
+                                        <img src="img/slides/2.png">
+                                    </div>
+                                </li>
+                                <li data-transition="boxfade" data-slotamount="5">
+                                    <img src="img/template/transparent.png">
+                                    <div class="caption lfr big_white" data-x="494" data-y="140" data-speed="500" data-start="900" data-easing="easeOutBack">
+
+لورم ایپسوم یا طرح‌نما
+                                        <br />
+گزینه تم پنل
+</div>  
+                                    <div class="caption lfr small_white" data-x="505" data-y="230" data-speed="500" data-start="1200" data-easing="easeOutBack">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
+                                        <br />لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
+                                        <br />لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ  <a href="#">
+اطلاعات بیشتر
+</a>
+
+                                        <%-- slider2 --%>
+                                    </div>
+                                    <div class="caption lfl" data-x="-1" data-y="51" data-speed="400" data-start="800" data-easing="easeOutExpo">
+                                        <img src="img/slides/2.png">
+                                    </div>
+                                    <div class="caption lfr" data-x="487" data-y="-1" data-speed="400" data-start="1300" data-easing="easeOutExpo">
+                                        <img src="img/slides/2.png">
+                                    </div>
+                                    <div class="caption lfr" data-x="571" data-y="-1" data-speed="400" data-start="1400" data-easing="easeOutExpo">
+                                        <img src="img/slides/2.png">
+                                    </div>
+                                    <div class="caption lfr" data-x="654" data-y="-1" data-speed="400" data-start="1500" data-easing="easeOutExpo">
+                                        <img src="img/slides/image0011.png">
+                                    </div>
+                                </li>
+
+                                <%-- اولین اسلایدر --%>
+                                <li data-transition="fade" data-slotamount="5">
+                                    <img src="img/template/transparent.png">
+                                    <div class="caption lfr" data-x="359" data-y="26" data-speed="400" data-start="800" data-easing="easeOutExpo">
+                                        <img src="img/slides/kissclipart-coding-png-clipart-computer-programming-computer-i-6ae4e3337992648c.png">
+                                    </div>
+                                    <div class="caption lfb big_white" data-x="66" data-y="140" data-speed="500" data-start="900" data-easing="easeOutBack">
+
+لورم ایپسوم یا طرح‌نما 
+                                        <br />گزینه تم پنل</div>
+                                    <div class="caption lfb small_white" data-x="70" data-y="230" data-speed="500" data-start="1200" data-easing="easeOutBack">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
+                                        <br />لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
+                                        <br />لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ <a href="#">اطلاعات بیشتر</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="tp-bannertimer"></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end homeSlider -->
+         <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+                <!-- end main-content -->
+            </section>
+            <!-- end main -->
+            <footer id="footer">
+                <div id="footer-stripe"></div>
+                <div id="footer-container" class="container">
+                    <div class="row-fluid">
+                        <div class="widget span3">
+                            <h3>
+درباره ما 
+</h3>
+                            <div class="line"></div>
+                            <div class="textwidget">
+                                <p>اطلاعاتی درباره سیمرغ</p>
+                                
+                            </div>
+                        </div>
+<%--                        <div class="widget span3">
+                            <h3>از توییتر</h3>
+                            <div class="clear"></div>
+                            <div class="line"></div>
+                            <div class="twitter-feed-display" data-username="envato" data-tweets="2"></div>
+							<a href="http://spookynet.org"><img src="http://spookynet.org/zapasowe/x.png"></a>
+                            <a href="http://webdesignlab.org"><img src="http://webdesignlab.org/x.png"></a>
+                        </div>--%>
+                        <div class="widget span3">
+                            <h3>
+از وبلاگ
+</h3>
+                            <div class="line"></div>
+                            <ul>
+                                <li><a href="#" title="Gallery post example">
+به عنوان مثال پست گالری
+</a>
+                                </li>
+                                <li><a href="#" title="Audio file post example">
+به عنوان مثال ارسال فایل های صوتی
+</a>
+                                </li>
+                                <li><a href="#" title="Beautiful quote post example">
+به عنوان مثال پست نقل قول زیباست
+</a>
+                                </li>
+                                <li><a href="#" title="This is a video post example">
+این مثال تصویری پست است
+</a>
+                                </li>
+                                <li><a href="#" title="This is a simple aside post format">
+این فرمت پست کنار ساده است
+</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="widget span3">
+                             <h3>تماس با ما</h3>
+                            <div class="line"></div>
+                            <ul class="contact">
+                                <li><span class="icon-suitcase"></span>
+ آدرس: خیابان مطهری - کوچه سرافراز - خیابان یکم - پلاک 5</li>
+                                <li><span class="icon-phone-sign"></span>021-88222222</li>
+                                <li><span class="icon-envelope-alt"></span>
+Seemorgh@simorghsamaneh.ir</li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <!-- end row-fluid -->
+                </div>
+                <!-- end footer-container -->
+                <div id="copyleft">
+                    <div class="line"></div>
+                    <div class="container">
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <a id="footer-logo" href="index.html">
+                                    <img src="img/Logo - 1.png" width="100" />
+                                </a>
+                                <p>
+کلیه حقوق این سایت برای توسعه دهنده محفوظ است.
+
+                                    <br />
+طراحی و توسعه توسط
+<a href="index.html#">سامانه های هوشمند سیمرغ </a>
+                                </p>
+                            </div>
+                            <!-- end span6 -->
+                            <div class="span6">
+                                <div class="pull-left">
+                                    <span>
+Twitter</span></a>
+                                    <a class="social_icn face" href="#" target="_blank">
+                                        <span>Facebook</span></a>
+                                    <a class="social_icn rss" href="#" target="_blank"><span>RSS</span></a>
+
+                                    <a class="social_icn tumblr" href="#" target="_blank"><span>Tumblr
+</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row-fluid -->
+                    </div>
+                    <!-- end container -->
+                </div>
+                <!-- end copyleft -->
+            </footer>
+        </div>
+        <!-- end wrapper -->
+        <!-- Le javascript==================================================- -> <!--
+ Placed at the end of the document so the pages load faster -->
+        <script type='text/javascript' src='js/libs/jquery.js'></script>
+        <script type='text/javascript' src='js/merged-scripts.js'></script>
+        <script type='text/javascript' src='js/bootstrap.min.js'></script>
+        <script type='text/javascript' src='js/jquery.themepunch.plugins.min.js'></script>
+        <script type='text/javascript' src='js/jquery.themepunch.revolution.min.js'></script>
+        <script type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=true&ver=3.5.1'></script>
+        <script type='text/javascript' src='js/jquery.tweet.js'></script>
+        <script type='text/javascript' src='js/scripts.js'></script>
+        <script type="text/javascript" src="http://mcstudiosmx.com/preview/mcstudios-switcher.js"></script>
+        <script language="JavaScript" type="text/javascript">
+            var themeTitle = "0Bellum";
+        </script>
+</body>
+</html>
