@@ -4,29 +4,16 @@ using System.IO;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ReportsController : ControllerBase
+    public class UploadController : ControllerBase
     {
-        private readonly AuthenticationContext _context;
-
-        string fileUrl = "";
-
-        public ReportsController(AuthenticationContext context)
-        {
-            _context = context;
-        }
-
         [HttpPost, DisableRequestSizeLimit]
-        [Route("Upload")]
         public IActionResult Upload()
         {
             try
@@ -40,7 +27,6 @@ namespace WebAPI.Controllers
                     var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
                     var fullPath = Path.Combine(pathToSave, fileName);
                     var dbPath = Path.Combine(folderName, fileName);
-                    fileUrl = dbPath;
 
                     using (var stream = new FileStream(fullPath, FileMode.Create))
                     {
@@ -58,18 +44,6 @@ namespace WebAPI.Controllers
             {
                 return StatusCode(500, "Internal server error");
             }
-        }
-
-        // POST: api/Reports
-        [Authorize]
-        [HttpPost]
-        public bool PostReport(Report report)
-        { 
-            
-            _context.Reports.Add(report);
-            _context.SaveChangesAsync();
-
-            return true;
         }
     }
 }

@@ -21,8 +21,9 @@ namespace WebAPI.Models
 
         public string Saz { get; set; }
 
+        public string FileUrl { get; set; }
 
-        public Report(string name, string family, string state, string city, string saz)
+        public Report(string name, string family, string state, string city, string saz, string fileUrl)
         {
             Name = name;
 
@@ -33,6 +34,8 @@ namespace WebAPI.Models
             City = city;
 
             Saz = saz;
+
+            FileUrl = fileUrl;
         }
     }
 }
