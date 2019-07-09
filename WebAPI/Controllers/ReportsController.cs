@@ -64,12 +64,19 @@ namespace WebAPI.Controllers
         [Authorize]
         [HttpPost]
         public bool PostReport(Report report)
-        { 
+        {
             
-            _context.Reports.Add(report);
-            _context.SaveChangesAsync();
+              _context.Reports.Add(report);
+             _context.SaveChangesAsync();
 
             return true;
+        }
+
+        // GET: api/Reports
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Report>>> GetReports()
+        {
+            return await _context.Reports.ToListAsync();
         }
     }
 }
